@@ -1,1 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><rect width="32" height="32" rx="7" fill="#1A5FAE"/><circle cx="16" cy="16" r="10.5" fill="none" stroke="#A7C8FF" stroke-width="1.1" opacity="0.55"/><g stroke="#A7C8FF" stroke-width="1.1" stroke-linecap="round" opacity="0.7"><path d="M16 4.2v2.4M16 25.4v2.4M4.2 16h2.4M25.4 16h2.4"/></g><path d="M16 5.6 19.2 16 16 16Z" fill="#FFFFFF"/><path d="M16 5.6 12.8 16 16 16Z" fill="#E6EEFB"/><path d="M16 26.4 19.2 16 16 16Z" fill="#6C97D6"/><path d="M16 26.4 12.8 16 16 16Z" fill="#A7C8FF"/><circle cx="16" cy="16" r="1.9" fill="#1A5FAE" stroke="#FFFFFF" stroke-width="1.1"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#0B2E63"/>
+      <stop offset="55%" stop-color="#071838"/>
+      <stop offset="100%" stop-color="#04091C"/>
+    </radialGradient>
+    <linearGradient id="gradF1" x1="150" y1="100" x2="320" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="gradF2" x1="270" y1="200" x2="420" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="gradBar" x1="160" y1="217" x2="430" y2="217" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A5F3FC"/>
+      <stop offset="55%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#7DA7E8" stroke-width="1" opacity="0.10"/>
+    </pattern>
+    <clipPath id="squircle">
+      <rect width="512" height="512" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#squircle)">
+    <rect width="512" height="512" fill="url(#bgGlow)"/>
+    <rect width="512" height="512" fill="url(#grid)"/>
+
+    <!-- FF monogram from the 512 logo, recentered and enlarged (no wordmark at favicon size) -->
+    <g transform="translate(256 256) scale(1.4) translate(-275 -235.5)">
+      <g transform="translate(28 -20) skewX(-12)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M183 296V121H292" stroke="url(#gradF1)" stroke-width="30"/>
+        <path d="M297 390V214M297 313h87" stroke="url(#gradF2)" stroke-width="30"/>
+        <path d="M170 217H420" stroke="url(#gradBar)" stroke-width="30"/>
+      </g>
+    </g>
+  </g>
+</svg>
